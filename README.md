@@ -1,14 +1,12 @@
 # Desafio 9
 ## Primero creamos una imagen de Docker que vamos a usar
 #### Esta es la arquitectura que se uso
-<img width="420" alt="Captura de Pantalla 2023-10-31 a la(s) 09 56 24 p  m" src="https://github.com/CamilaCosentino/HelmChartKubbernetesGitOps/assets/89109209/7b40904e-013e-44d7-afd1-29466e42adbb">
-
+<img width="428" alt="Captura de Pantalla 2023-11-03 a la(s) 08 18 19 p  m" src="https://github.com/CamilaCosentino/HelmChartKubbernetesGitOps/assets/89109209/ebb17233-ac1a-4521-a5f6-23d3768c7a10">
 
 ### Construimos la imagen
 ```bash
 docker build -t app-chat:1.0.0 -f ./Dockerfile .
 ```
-<img width="1008" alt="Captura de Pantalla 2023-10-31 a la(s) 10 01 26 p  m" src="https://github.com/CamilaCosentino/HelmChartKubbernetesGitOps/assets/89109209/6c1b5806-3a59-450a-85a0-6ce973b0e04f">
 
 ### Renombramos la imagen para subirla a Docker Hub
 ```bash
