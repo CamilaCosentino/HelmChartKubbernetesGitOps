@@ -1,0 +1,4 @@
+openai==0.28.1
+config==0.5.1
+typer==0.9.0
+rich==13.6.0

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Role
+metadata:
+  name: {{ include "pythonapp-helm-chart.fullname" . }}
+  labels:
+    {{- include "pythonapp-helm-chart.labels" . | nindent 4 }}
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "watch", "list"]
