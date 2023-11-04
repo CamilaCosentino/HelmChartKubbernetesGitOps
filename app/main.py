@@ -48,7 +48,7 @@ def __prompt() -> str:
     prompt = typer.prompt("\n¿Sobre qué queres hablar?")
     if prompt == "exit":
         exit = typer.confirm(
-            "✋ Estás seguro? [bold red]Esta acción no se puede revertir[/bold red]")
+            "✋ Estás seguro de hacer esta accion? [bold red]Esta acción no se puede revertir[/bold red]")
         if exit:
             print("👋 ¡Hasta luego!")
             raise typer.Abort()
