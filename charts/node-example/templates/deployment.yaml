@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "pythonapp-helm-chart.fullname" . }}
+  name: {{ include "helm-chart.fullname" . }}
   labels:
-    {{- include "pythonapp-helm-chart.labels" . | nindent 4 }}
+    {{- include "helm-chart.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "pythonapp-helm-chart.selectorLabels" . | nindent 6 }}
+      {{- include "helm-chart.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,14 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "pythonapp-helm-chart.selectorLabels" . | nindent 8 }}
+        {{- include "helm-chart.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "pythonapp-helm-chart.serviceAccountName" . }}
-      automountServiceAccountToken: {{ .Values.serviceAccount.automount }}
+      serviceAccountName: {{ include "helm-chart.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -42,11 +41,11 @@ spec:
           - name: MENSAJE
             valueFrom:
               secretKeyRef:
-                name: {{ include "pythonapp-helm-chart.fullname" . }}-secretmessage
+                name: {{ include "helm-chart.fullname" . }}-secret
                 key: MENSAJE
           volumeMounts:
-          - name: pythonapp-volume
-            mountPath: /usr/src/pythonapp
+          - name: nodejs-example-volume
+            mountPath: /usr/src/app/db
           livenessProbe:
             httpGet:
               path: /
@@ -72,5 +71,4 @@ spec:
       volumes:
       - name: nodejs-example-volume
         persistentVolumeClaim:
-          claimName: {{ include "pythonapp-helm-chart.fullname" . }}-pvc
-
+          claimName: {{ include "helm-chart.fullname" . }}-pvc
