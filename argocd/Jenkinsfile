@@ -45,8 +45,8 @@ spec:
                         argocd app set argocd-example-app \
                         --helm-chart nodejs-example-chart \
                         --project default \
-                        --repo https://edgaregonzalez.github.io/nodejs-example-chart \
-                        --release-name nodejs-app \
+                        --repo  https://camilacosentino.github.io/HelmChartKubbernetesGitOps/ /
+                        --release-name python-app \
                         --helm-version 0.1.5 \
                         --dest-namespace educacionit \
                         --dest-server https://kubernetes.default.svc \
