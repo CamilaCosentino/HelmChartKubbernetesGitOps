@@ -1,10 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: {{ .Release.Namespace }}
+
 metadata:
   name: {{ include "helm-chart.fullname" . }}
-  labels:
-    {{- include "helm-chart.labels" . | nindent 4 }}
+  namespace: {{ .Release.Namespace }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
