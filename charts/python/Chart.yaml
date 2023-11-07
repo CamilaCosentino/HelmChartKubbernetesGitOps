@@ -1,5 +1,4 @@
 apiVersion: v1
-name: python-app-chart
 description: Helm chart para desplegar una aplicacion de python
 
 # A chart can be either an 'application' or a 'library' chart.
