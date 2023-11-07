@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: python-app-ns
+namespace: {{ .Release.Namespace }}
 metadata:
   name: {{ include "helm-chart.fullname" . }}
   labels:

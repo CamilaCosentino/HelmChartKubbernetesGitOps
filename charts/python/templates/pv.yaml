@@ -2,6 +2,7 @@
 apiVersion: v1
 kind: PersistentVolume
 namespace: python-app-ns
+namespace: {{ .Release.Namespace }}
 metadata:
   name: {{ include "helm-chart.fullname" . }}
 spec:
