@@ -1,6 +1,7 @@
 {{- if .Values.PersistentVolumeClaim.enabled -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
+namespace: python-app-ns
 metadata:
   name: {{ include "helm-chart.fullname" . }}-pvc
 spec:

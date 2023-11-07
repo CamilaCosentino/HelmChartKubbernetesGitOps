@@ -1,6 +1,7 @@
 {{- if .Values.PersistentVolume.enabled -}}
 apiVersion: v1
 kind: PersistentVolume
+namespace: python-app-ns
 metadata:
   name: {{ include "helm-chart.fullname" . }}
 spec:
