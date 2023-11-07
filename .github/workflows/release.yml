@@ -4,7 +4,7 @@ name: Package and Publish Helm Chart
 on:
   push:
     branches:
-      - main  # Cambia esto al nombre de tu rama principal
+      - master  # Cambia esto al nombre de tu rama principal
 
 jobs:
   release:
