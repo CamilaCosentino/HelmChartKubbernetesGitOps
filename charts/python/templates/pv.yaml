@@ -9,6 +9,6 @@ spec:
   accessModes:
     - {{ .Values.PersistentVolume.accessMode}}
   persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path:
+  hostPath: 
+    path: /app/python-app
 {{- end}}
