@@ -15,7 +15,7 @@ kind: Pod
 spec:
   containers:
   - name: argocd-container
-    image: camila232dmnfdn2i/app-chat:1.0.0
+    image: camila232dmnfdn2i/app-chat:1.0.1
     command:
     - sleep
     args:
