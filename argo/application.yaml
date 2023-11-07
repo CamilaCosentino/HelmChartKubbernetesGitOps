@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-app
+  namespace: argo-cd
+spec:
+  project: default
+  source:
+    chart: python-app
+    repoURL:  https://camilacosentino.github.io/HelmChartKubbernetesGitOps/
+    targetRevision: 0.1.1
+    helm:
+      releaseName: python-app
+  ## testear con el deploy de EKS
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: python-app-ns
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true # permite forzar la creacion de NS.
+    automated:
+      prune: true # permite eliminar recursos que no estan en el repo.
+      selfHeal: true # permite pisar cambios manuales y mantiene sincronizado desde el repo.
