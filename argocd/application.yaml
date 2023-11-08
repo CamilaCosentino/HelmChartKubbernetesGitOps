@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    chart: python-app
+    chart: app-chart
     repoURL:  https://camilacosentino.github.io/HelmChartKubbernetesGitOps/
-    targetRevision: 0.1.5
+    targetRevision: 0.1.2
     helm:
-      releaseName: python-app-chart
+      releaseName: app-chart
   ## testear con el deploy de EKS
   destination:
     server: "https://kubernetes.default.svc"
