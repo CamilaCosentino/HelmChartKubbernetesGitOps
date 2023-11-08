@@ -1,9 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
-
 metadata:
   name: {{ include "helm-chart.fullname" . }}
-  namespace: {{ .Release.Namespace }}
+  
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
