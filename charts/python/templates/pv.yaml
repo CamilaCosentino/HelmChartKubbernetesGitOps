@@ -3,7 +3,7 @@ apiVersion: v1
 kind: PersistentVolume
 namespace: python-app-ns
 metadata:
-  name: {{ include "helm-chart.fullname" . }}
+  name: {{ include "helm-chart.fullname" . }}-pv
 spec:
   capacity:
     storage: {{ .Values.PersistentVolume.size}}  # Asegúrate de cambiar esto según tus necesidades
