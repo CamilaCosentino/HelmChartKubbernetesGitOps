@@ -43,7 +43,7 @@ spec:
                 name: {{ include "helm-chart.fullname" . }}-secret
                 key: MENSAJE
           volumeMounts:
-          - name: nodejs-example-volume
+          - name: app-volume
             mountPath: /usr/src/app/db
           livenessProbe:
             httpGet:
@@ -68,6 +68,6 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
-      - name: nodejs-example-volume
+      - name: app-volume-chaim
         persistentVolumeClaim:
           claimName: {{ include "helm-chart.fullname" . }}-pvc
