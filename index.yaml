@@ -3,6 +3,16 @@ entries:
   app-chart:
   - apiVersion: v1
     appVersion: 1.0.0
+    created: "2023-11-09T23:48:37.018298408Z"
+    description: Helm chart para desplegar una aplicacion de python
+    digest: 129ba245f88e667114ddc537b6c7140abb445e5ad31370902fd37fbf6b569238
+    name: app-chart
+    type: application
+    urls:
+    - https://github.com/CamilaCosentino/HelmChartKubbernetesGitOps/releases/download/app-chart-0.1.9/app-chart-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v1
+    appVersion: 1.0.0
     created: "2023-11-09T23:33:14.618619324Z"
     description: Helm chart para desplegar una aplicacion de python
     digest: a437beba9abd06130b583b55e8ca5752c734bfb91e50ecf28faa1bfc36650112
@@ -71,4 +81,4 @@ entries:
     urls:
     - https://github.com/CamilaCosentino/HelmChartKubbernetesGitOps/releases/download/app-chart-0.1.1/app-chart-0.1.1.tgz
     version: 0.1.1
-generated: "2023-11-09T23:33:14.618642426Z"
+generated: "2023-11-09T23:48:37.018327308Z"
