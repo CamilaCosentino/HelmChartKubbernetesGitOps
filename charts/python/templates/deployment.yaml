@@ -1,4 +1,4 @@
-apiVersion: apps/v1/Deployment:app-chart
+apiVersion: apps/v1/app-chart
 kind: Deployment
 namespace: python-app-ns
 metadata:
