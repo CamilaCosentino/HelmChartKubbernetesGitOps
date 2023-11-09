@@ -2,7 +2,7 @@ apiVersion: apps/v1/app-chart
 kind: Deployment
 namespace: python-app-ns
 metadata:
-  name: {{ include "helm-chart.fullname" . }}
+  name: {{ include "helm-chart.fullname" . }} 
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
