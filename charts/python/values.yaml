@@ -90,7 +90,7 @@ PersistentVolume:
   enabled: true
   size: 10Gi
   accessMode: "ReadWriteOnce"
-  storageClass: "standard"
+  storageClass: ""
 
 PersistentVolumeClaim:
   enabled: true
