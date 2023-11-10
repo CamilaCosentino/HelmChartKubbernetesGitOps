@@ -1,7 +1,5 @@
 # Desafio 9
 ## Primero creamos una imagen de Docker que vamos a usar
-#### Esta es la arquitectura que se uso
-<img width="1680" alt="Captura de Pantalla 2023-11-02 a la(s) 07 54 27 p  m" src="https://github.com/CamilaCosentino/HelmChartKubbernetesGitOps/assets/89109209/e6d8fb74-7535-4390-8aca-00e42e31328d">
 
 ### Construimos la imagen
 ```bash
